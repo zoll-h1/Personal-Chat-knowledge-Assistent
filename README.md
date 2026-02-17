@@ -1,1 +1,1 @@
-# rag-caht-assistant
+# rag-chat-assistant
