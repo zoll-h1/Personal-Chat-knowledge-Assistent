@@ -1,6 +1,26 @@
-.env
-data/raw/
-data/processed/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.so
+.pytest_cache/
+
+# Virtualenvs
+venv/
 .venv/
+
+# Env files
+.env
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/sample_export_stub.json
+data/processed/*
+!data/processed/.gitkeep
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store

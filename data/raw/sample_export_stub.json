@@ -1,0 +1,103 @@
+{
+  "conversations": [
+    {
+      "id": "chat-sample-1",
+      "title": "FastAPI + Qdrant setup notes",
+      "create_time": "2024-01-10T09:00:00Z",
+      "mapping": {
+        "node-1": {
+          "id": "node-1",
+          "message": {
+            "id": "m-1",
+            "author": {"role": "user"},
+            "create_time": 1704877200,
+            "content": {
+              "parts": [
+                "How do I run FastAPI with uvicorn and connect Qdrant at http://localhost:6333?"
+              ]
+            }
+          }
+        },
+        "node-2": {
+          "id": "node-2",
+          "parent": "node-1",
+          "message": {
+            "id": "m-2",
+            "author": {"role": "assistant"},
+            "create_time": 1704877260,
+            "content": {
+              "parts": [
+                "Run: `uvicorn app.api.main:app --reload` and configure qdrant-client URL."
+              ]
+            }
+          }
+        },
+        "node-3": {
+          "id": "node-3",
+          "parent": "node-2",
+          "message": {
+            "id": "m-3",
+            "author": {"role": "user"},
+            "create_time": "2024-01-10T09:05:00Z",
+            "content": {
+              "parts": [
+                "My email is jane@example.com and phone is +1 (415) 555-1212."
+              ]
+            }
+          }
+        },
+        "node-4": {
+          "id": "node-4",
+          "parent": "node-3",
+          "message": {
+            "id": "m-4",
+            "author": {"role": "assistant"},
+            "create_time": "2024-01-10T09:06:00Z",
+            "content": {
+              "parts": [
+                "Never store keys like sk-AAAAAAAAAAAAAAAAAAAAAAAAAAAA in source code."
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "chat-sample-2",
+      "title": "Database query tuning",
+      "create_time": "2024-01-14T12:00:00Z",
+      "messages": [
+        {
+          "id": "m-10",
+          "role": "user",
+          "create_time": "2024-01-14T12:00:10Z",
+          "content": {
+            "parts": [
+              "How do I optimize a slow SQL query on Postgres?"
+            ]
+          }
+        },
+        {
+          "id": "m-11",
+          "role": "assistant",
+          "create_time": "2024-01-14T12:00:30Z",
+          "content": {
+            "parts": [
+              "Use EXPLAIN ANALYZE, add indexes on filter columns, and avoid SELECT *."
+            ]
+          }
+        },
+        {
+          "id": "m-12",
+          "role": "assistant",
+          "create_time": "2024-01-14T12:00:50Z",
+          "content": {
+            "parts": [
+              "```sql\nEXPLAIN ANALYZE SELECT id, email FROM users WHERE org_id = 42;\n```"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

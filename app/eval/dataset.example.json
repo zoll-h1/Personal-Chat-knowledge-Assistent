@@ -1,0 +1,17 @@
+[
+  {
+    "question": "How do I run FastAPI with Uvicorn?",
+    "expected_chat_id": "chat-sample-1",
+    "expected_keywords": ["uvicorn", "fastapi"]
+  },
+  {
+    "question": "What did we use for vector storage?",
+    "expected_chat_id": "chat-sample-1",
+    "expected_keywords": ["qdrant"]
+  },
+  {
+    "question": "Show me a SQL optimization tip from my chats",
+    "expected_chat_id": "chat-sample-2",
+    "expected_keywords": ["index", "query"]
+  }
+]
